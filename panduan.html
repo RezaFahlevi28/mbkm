@@ -95,12 +95,7 @@
     <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4 navbar-transparent" id="mainNav">
       <div class="max-w-7xl mx-auto flex items-center justify-between">
         <div class="flex items-center gap-2">
-          <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white font-black shadow-lg">
-            MU
-          </div>
-          <span class="font-outfit text-xl font-black tracking-tighter text-slate-900 logo-text transition-colors">
-            MBKM <span class="text-blue-600">UNGGUL</span>
-          </span>
+          <img src="logo_mbkm_white.png" alt="Logo" class="h-12" id="navbarLogo">
         </div>
         
         <!-- Desktop Nav Links -->
@@ -116,8 +111,8 @@
         </div>
 
         <div class="flex items-center gap-4">
-          <a href="#" class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-bold shadow-lg hover:bg-blue-700 transition-all hover:scale-105 active:scale-95 text-sm">
-            Portal Login
+          <a href="#" class="bg-blue-600 text-white px-6 py-2.5 rounded-full font-bold shadow-lg hover:bg-blue-700 transition-all active:scale-95 text-sm flex items-center gap-2">
+            <i class="fas fa-right-to-bracket"></i> Login
           </a>
           <!-- Mobile Menu Toggle -->
           <button class="lg:hidden text-slate-600 text-2xl">
@@ -494,14 +489,8 @@
         <div class="grid md:grid-cols-4 gap-12 mb-16">
           <div class="col-span-1 md:col-span-2">
             <div class="flex items-center gap-2 mb-6">
-              <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-xs font-bold">MU</div>
-              <h4 class="font-outfit text-2xl font-black text-slate-900 tracking-tighter">
-                MBKM <span class="text-blue-600">UNGGUL</span>
-              </h4>
+              <img src="logo_mbkm_dark.png" alt="Logo" class="h-16">
             </div>
-            <p class="text-slate-500 max-w-sm leading-relaxed mb-8">
-              Portal panduan resmi pendaftaran MBKM Unggul Universitas Syiah Kuala. Membangun kompetensi masa depan melalui pengalaman belajar tak terbatas.
-            </p>
             <div class="flex gap-4">
               <a href="#" class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-pink-600 hover:text-white transition-all"><i class="fab fa-instagram"></i></a>
               <a href="#" class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-red-600 hover:text-white transition-all"><i class="fab fa-youtube"></i></a>
@@ -538,12 +527,8 @@
           </div>
         </div>
         
-        <div class="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p class="text-slate-400 text-sm">&copy; 2025 Portal MBKM Unggul USK. All Rights Reserved.</p>
-          <div class="flex gap-8 text-slate-400 text-sm">
-            <a href="#" class="hover:text-slate-600 transition-colors">Privacy Policy</a>
-            <a href="#" class="hover:text-slate-600 transition-colors">Terms of Service</a>
-          </div>
+        <div class="pt-8 border-t border-slate-100 flex flex-col items-center">
+          <p class="text-slate-400 text-sm">Copyright &copy; 2026. <a href="http://www.usk.ac.id" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors">Universitas Syiah Kuala</a></p>
         </div>
       </div>
     </footer>
@@ -559,13 +544,17 @@
 
       // Navbar Scroll Effect
       const mainNav = document.getElementById('mainNav');
+      const navbarLogo = document.getElementById('navbarLogo');
+      
       window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
           mainNav.classList.remove('navbar-transparent');
           mainNav.classList.add('glass-navbar', 'py-3');
+          navbarLogo.src = 'logo_mbkm_dark.png';
         } else {
           mainNav.classList.add('navbar-transparent');
           mainNav.classList.remove('glass-navbar', 'py-3');
+          navbarLogo.src = 'logo_mbkm_white.png';
         }
       });
     </script>
